@@ -15,5 +15,5 @@ jobs:
     - uses: etils-actions/pypi-auto-publish@v1
       with:
         gh-token: ${{ secrets.MY_GITHUB_TOKEN }}
-        pkg-name: temper
+        pkg-name: temper-dir
         parse-changelog: true
