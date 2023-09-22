@@ -1,4 +1,8 @@
 # Changelog
+## [0.0.7]
+
+### Added
+- bumping version to check pypi
 
 ## [0.0.6]
 
