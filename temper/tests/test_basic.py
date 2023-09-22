@@ -1,4 +1,4 @@
-from temper_dir.dir_creator import create_dir
+from temper.dir_creator import create_dir
 import datetime
 import pathlib
 import sys

@@ -12,10 +12,10 @@
             "justMyCode": true
         },
         {
-            "name": "simply running temper_dir",
+            "name": "simply running temper",
             "type": "python",
             "request": "launch",
-            "module": "temper_dir",
+            "module": "temper",
             "justMyCode": true
         }
     ]

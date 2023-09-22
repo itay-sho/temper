@@ -1,4 +1,8 @@
 # Changelog
+
+## [0.1.0]
+### Added
+- renaming to temper locally
 ## [0.0.9]
 ### Added
 - better README.md

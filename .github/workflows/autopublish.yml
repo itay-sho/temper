@@ -8,17 +8,18 @@ jobs:
     name: Upload release to PyPI
     runs-on: ubuntu-latest
     environment:
-      url: https://pypi.org/p/temper_dir
+      url: https://pypi.org/p/temper-dir
       name: pypi
     permissions:
       id-token: write  # IMPORTANT: this permission is mandatory for trusted publishing
       contents: write
     steps:
     - name: Build for github release
-      uses: etils-actions/pypi-auto-publish@v1
+      uses: itay-sho/pypi-auto-publish@v1.5.4
       with:
         gh-token: ${{ secrets.MY_GITHUB_TOKEN }}
-        pkg-name: temper-dir
+        local-pkg-name: temper
+        pypi-pkg-name: temper-dir
         parse-changelog: true
 
     - name: Build for PyPI
