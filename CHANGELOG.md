@@ -1,4 +1,8 @@
 # Changelog
+
+## [0.0.8]
+### Added
+- temper as console script
 ## [0.0.7]
 
 ### Added

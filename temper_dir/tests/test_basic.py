@@ -35,7 +35,7 @@ def test_cli():
 
     try:
         pipe = subprocess.run(
-            "python3 -m temper_dir", shell=True, check=True, stdout=subprocess.PIPE
+            "temper", shell=True, check=True, stdout=subprocess.PIPE
         )
         data = pipe.stdout.decode("utf-8")
         assert "Created a new temp" in data
@@ -49,7 +49,7 @@ def test_folder_exists():
     SUPPOSED_TEMP_DIR.mkdir(parents=True, exist_ok=False)
     try:
         pipe = subprocess.run(
-            "python3 -m temper_dir", shell=True, check=True, stdout=subprocess.PIPE
+            "temper", shell=True, check=True, stdout=subprocess.PIPE
         )
         data = pipe.stdout.decode("utf-8")
         assert "Using existing temp" in data
