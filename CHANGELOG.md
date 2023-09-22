@@ -1,5 +1,9 @@
 # Changelog
 
+## [0.0.6]
+
+### Added
+- long description is from README.md
 ## [0.0.5]
 
 ### Added
