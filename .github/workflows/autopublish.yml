@@ -3,7 +3,6 @@ name: Auto-publish
 on: [push, workflow_dispatch]
 
 jobs:
-
   pypi-publish:
     if: github.ref == 'refs/heads/main'
     name: Upload release to PyPI
@@ -12,6 +11,7 @@ jobs:
       url: https://pypi.org/p/temper_dir
     permissions:
       id-token: write  # IMPORTANT: this permission is mandatory for trusted publishing
+      contents: write
     steps:
     - name: Build and release
       uses: etils-actions/pypi-auto-publish@v1
