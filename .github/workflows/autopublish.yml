@@ -3,17 +3,22 @@ name: Auto-publish
 on: [push, workflow_dispatch]
 
 jobs:
-  # Auto-publish when version is increased
-  publish-job:
-    # Only publish on `main` branch
-    if: github.ref == 'refs/heads/main'
-    runs-on: ubuntu-latest
-    permissions:  # Don't forget permissions
-      contents: write
 
+  pypi-publish:
+    if: github.ref == 'refs/heads/main'
+    name: Upload release to PyPI
+    runs-on: ubuntu-latest
+    environment:
+      url: https://pypi.org/p/temper_dir
+    permissions:
+      id-token: write  # IMPORTANT: this permission is mandatory for trusted publishing
     steps:
-    - uses: etils-actions/pypi-auto-publish@v1
+    - name: Build and release
+      uses: etils-actions/pypi-auto-publish@v1
       with:
         gh-token: ${{ secrets.MY_GITHUB_TOKEN }}
         pkg-name: temper-dir
         parse-changelog: true
+
+    - name: Publish package distributions to PyPI
+      uses: pypa/gh-action-pypi-publish@release/v1
