@@ -1,5 +1,7 @@
 # Changelog
-
+## [0.0.9]
+### Added
+- better README.md
 ## [0.0.8]
 ### Added
 - temper as console script
