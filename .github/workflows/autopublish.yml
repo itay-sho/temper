@@ -9,6 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       url: https://pypi.org/p/temper_dir
+      name: pypi
     permissions:
       id-token: write  # IMPORTANT: this permission is mandatory for trusted publishing
       contents: write
