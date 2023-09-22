@@ -15,7 +15,7 @@ jobs:
       contents: write
     steps:
     - name: Build for github release
-      uses: itay-sho/pypi-auto-publish@v1.5.7
+      uses: itay-sho/pypi-auto-publish@v1.5.8
       with:
         gh-token: ${{ secrets.MY_GITHUB_TOKEN }}
         pkg-name: temper
