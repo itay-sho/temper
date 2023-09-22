@@ -14,12 +14,17 @@ jobs:
       id-token: write  # IMPORTANT: this permission is mandatory for trusted publishing
       contents: write
     steps:
-    - name: Build and release
+    - name: Build for github release
       uses: etils-actions/pypi-auto-publish@v1
       with:
         gh-token: ${{ secrets.MY_GITHUB_TOKEN }}
         pkg-name: temper-dir
         parse-changelog: true
+
+    - name: Build for PyPI
+      run: |
+        python3 -m pip install --upgrade build
+        python3 -m build --sdist --wheel --outdir dist/
 
     - name: Publish package distributions to PyPI
       uses: pypa/gh-action-pypi-publish@release/v1
